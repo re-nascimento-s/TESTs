@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botsapp Web</title>
+    <link rel="stylesheet" href="\static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Botsapp</h1>
+        <form action="/carregar_arquivo" method="POST" enctype="multipart/form-data">
+            <label for="file">Selecione o arquivo:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Carregar Arquivo</button>
+        </form>
+
+
+        <form action="/enviar_mensagens" method="POST">
+            <label for="analista">Nome do Analista:</label>
+            <input type="text" id="analista" name="analista" required>
+
+            <label for="mensagem1">Mensagem 1:</label>
+            <textarea id="mensagem1" name="mensagem1" required></textarea>
+
+            <label for="mensagem2">Mensagem 2:</label>
+            <textarea id="mensagem2" name="mensagem2" required></textarea>
+
+            <label for="mensagem3">Mensagem 3:</label>
+            <textarea id="mensagem3" name="mensagem3" required></textarea>
+
+            <button type="submit">Iniciar Envio</button>
+        </form>
+
+        
+        <form action="/parar_mensagens" method="POST">
+            <button type="submit">Parar Envio</button>
+        </form>
+        
+    </div>
+</body>
+</html>
